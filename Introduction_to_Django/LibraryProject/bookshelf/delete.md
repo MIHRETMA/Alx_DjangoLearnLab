@@ -6,7 +6,7 @@ python manage.py shell
 from bookshelf.models import Book
 
 #Delete Book instance
-book = Book.objects.get(title="1984 new")
+book = Book.objects.get(title="Nineteen Eighty-Four")
 book.delete()
 
 Book.objects.all()
