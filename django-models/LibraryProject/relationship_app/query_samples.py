@@ -9,8 +9,8 @@ django.setup()
 
 from relationship_app.models import Author, Book, Library
 
-def query_books_by_author(author):
-    books = Author.objects.filter(author=author)
+def query_books_by_author(author_name):
+    books = Author.objects.get(name=author_name)
     print(f"Books by {author_name}:")
     for book in books:
         print(f"- {book.title}")
